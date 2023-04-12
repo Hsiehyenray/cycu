@@ -1,0 +1,340 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <!-- Required meta tags -->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <title></title>
+    <!-- Bootstrap CSS -->
+    <link rel="stylesheet" href="css/bootstrap.min.css">
+    <!-- Google Fonts -->
+    <link href="https://fonts.googleapis.com/css?family=Lora:400,700" rel="stylesheet">
+    <!-- Font Awesome -->
+    <link rel="stylesheet" href="css/font-awesome.min.css">
+    <!-- Simple Line Font -->
+    <link rel="stylesheet" href="css/simple-line-icons.css">
+    <!-- Owl Carousel -->
+    <link rel="stylesheet" href="css/slick.css">
+    <link rel="stylesheet" href="css/slick-theme.css">
+    <link rel="stylesheet" href="css/owl.carousel.min.css">
+    <!-- Main CSS -->
+    <link href="css/style.css" rel="stylesheet">
+</head>
+
+<body>
+    <!-- ========================= Landing header =========================-->
+    <section class="landing-header about_bg">
+        <div class="container">
+            <div class="row">
+                <div class="col-md-12">
+                    <a href="index-video.html"><img src="images/logo.png" class="img-fluid landing-logo" alt="#"></a>
+                </div>
+            </div>
+            <div class="landing-form">
+                <div class="row">
+                    <div class="col-md-8">
+                        <div class="landing-title">
+                            <h2>中原大學各科系口面試攻略講座</h2><br>
+                            <h4>【講座地點】</h4>
+
+                            <p>線上講座：歡迎填表報名，索取線上講座連結！<br>
+                                
+                            實體講座：各科系皆有場次，歡迎填表報名洽詢，由專人聯繫您。</p>
+                                
+                            <h4>【講座時間】</h4>
+                                
+                            <p>（講座詳細時間流程，可能依各地據點而有所更動，歡迎填表洽詢）</p><br>
+                            <h4>你可能會喜歡的主體</h4>
+                            <ul>
+                                <li><a href="academics.html">各學院相關科系介紹</a></li>
+                                <li><a href="research.html">宿舍生活/社團活動</a></li>
+                                <li><a href="https://acadm.cycu.edu.tw/wp-content/uploads/%E4%B8%AD%E5%8E%9F%E5%A4%A7%E5%AD%B8111%E5%AD%B8%E5%B9%B4%E5%BA%A6%E5%A4%A7%E5%AD%B8%E5%80%8B%E4%BA%BA%E7%94%B3%E8%AB%8B%E5%85%A5%E5%AD%B8%E6%8C%87%E5%AE%9A%E9%A0%85%E7%9B%AE%E7%94%84%E8%A9%A6%E6%89%8B%E5%86%8A.pdf">中原大學111學年度大學申請入學指定項目甄試手冊下載【含注意事項、接駁車、交通指引等】 </a></li>
+                                <li><a href="https://icare.cycu.edu.tw/news/read/?4805">離島地區、大陸地區台商子弟學校視訊面試相關資訊公告【含辦理原則及申請單】
+
+                                </a></li>
+                            </ul>
+                        </div>
+                    </div>
+                    <div class="col-md-4">
+                        <div class="landing-form-wrap">
+                            <h4 class="text-center mb-3">報名表單</h4>
+                            <form action="php/admission.php" method="post" id="admissionform">
+                                <div class="row">
+                                    <div class="col-lg-12">
+                                        <div class="form-group">
+                                            <input type="text" name="first_name" class="form-control" placeholder="姓" required>
+                                        </div>
+                                        <div class="form-group">
+                                            <input type="text" name="last_name" class="form-control" placeholder="名" required>
+                                        </div>
+                                        <div class="form-group">
+                                            <input type="email" name="email" class="form-control" placeholder="Email" required>
+                                        </div>
+                                        <div class="form-group">
+                                            <select class="form-control custom-select" name="講座類型" required>
+                                                <option selected="" value="">講座類型</option>
+                                                <option value="select">實體</option>
+                                                <option value="select">線上</option>
+                                            </select>
+                                        </div>
+                                        <div class="form-group">
+                                            <select class="form-control custom-select" name="線上場次" required>
+                                                <option selected="" value="">報名場次</option>
+                                                <option value="select">第一梯次(資管系06/28 13:00~16:00)</option>
+                                                <option value="select">第二梯次(財經系07/03 13:00~16:00)</option>
+                                                <option value="select">第三梯次(電機系07/05 13:00~16:00)</option>
+                                                <option value="select">第四梯次(國貿系07/08 13:00~16:00)</option>
+                                            </select>
+                                        </div>
+                                        <div class="form-group">
+                                            <input type="text" name="phone" class="form-control" placeholder="電話" required>
+                                        </div>
+                                        <div >
+                                            <input type="submit" class="btn btn-warning" id="js-subscribe-btn">
+                                            
+                                                
+                                            <div id="js-admission-result" data-success-msg="Success, Your application has been sent" data-error-msg="Oops! Something went wrong"></div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </form>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+    <!--//END Landing header -->
+    <!--============================= ADMISSION DETAILS COURCES =============================-->
+    <section class="admission_cources">
+        <div class="container">
+            <div class="row">
+                <div class="col-md-12">
+                    <h2 class="text-center mb-4">面試講座詳細資訊</h2>
+                    <div class="table" style="margin-left:36%">
+                    <table style="border:10px #FFD382 groove;" cellpadding="10" border='0',font-size="20px">
+                        　<tr>
+                        　<td colspan="2">中原大學面試講座流程</td>
+                        　</tr>
+                        　<tr>
+                        　<td>13:00~13:30</td>
+                        　<td>入場、報到</td>
+                        　</tr>
+                        　<tr>
+                        　<td>13:30~14:00</td>
+                        　<td>國營聯招-面試流程簡介</td>
+                        　</tr>
+                        　<tr>
+                        　<td>14:00~14:30</td>
+                        　<td>自傳撰寫秘訣</td>
+                        　</tr>
+                        　<tr>
+                        　<td>14:30~15:00</td>
+                        　<td>常見題目對答</td>
+                        　</tr>
+                        　<tr>
+                        　<td>15:00~15:30</td>
+                        　<td>考官評分重點</td>
+                        　</tr>
+                        　<tr>
+                        　<td>15:30~16:00</td>
+                        　<td>問答時間</td>
+                        　</tr>       
+                        </table><br>
+                    </div>
+                </div>
+            </div>
+            <!-- <div class="row"> -->
+                <!-- <div class="col-lg-8"> -->
+                    <!-- <div class="admission_discription"> -->
+                        <!-- <h4>Advanced Certificate in Applied Management</h4> -->
+                        <!-- <div class="star-rating"> -->
+                            <!-- <i class="fa fa-star" aria-hidden="true"></i> -->
+                            <!-- <i class="fa fa-star" aria-hidden="true"></i> -->
+                            <!-- <i class="fa fa-star" aria-hidden="true"></i> -->
+                            <!-- <i class="fa fa-star" aria-hidden="true"></i> -->
+                            <!-- <i class="fa fa-star-o" aria-hidden="true"></i> -->
+                        <!-- </div> -->
+                        <!-- // end .star-rating -->
+                        <!-- <p>Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. </p> -->
+                        <!-- <ul> -->
+                            <!-- <li>Lorem ipsum dolor sit amet, consectetur adipiscing elit.</li> -->
+                            <!-- <li>In consequat lacus dapibus, iaculis massa vitae, condimentum risus.</li> -->
+                            <!-- <li>Curabitur varius magna quis ultrices lacinia.</li> -->
+                            <!-- <li>Consequat lacus dapibus, iaculis massa vitae, condimentum.</li> -->
+                        <!-- </ul> -->
+                        <!-- <p>It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged. It was popularised in the 1960s with the release of Letraset sheets containing.</p> -->
+                    <!-- </div> -->
+                <!-- </div> -->
+                <!-- <div class="col-lg-4"> -->
+                    <!-- <div class="admission_insruction"> -->
+                        <!-- <h4>Instructors</h4> -->
+                        <!-- <img src="images/admission-detail/instruction-img.jpg" class="img-fluid" alt="#"> -->
+                        <!-- <p>Frank Harvey -->
+                            <!-- <br> -->
+                            <!-- <span>Master of Science</span></p> -->
+                    <!-- </div> -->
+                <!-- </div> -->
+            <!-- </div> -->
+            <!-- <div class="row">
+                <div class="col-md-12">
+                    <h2 class="mb-3">Student testimonial</h2>
+                    <div class="landing-testimonial_block">
+                        <i class="fa fa-quote-left" aria-hidden="true"></i>
+                        <p>Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book.</p>
+                        <h6><strong>Michelle Salazar</strong><h6>
+                            </div>
+                        </div>
+                    </div>
+                </div> -->
+            <!-- </section> -->
+            <!--//END ADMISSION DETAILS COURCES -->
+            <!--============================= Pricing =============================-->
+            <!-- <div class="pricing"> -->
+                <!-- <div class="container"> -->
+                    <!-- <div class="row"> -->
+                        <!-- <div class="col-md-4">  -->
+                            <!-- <div class="table-columns">
+                                <ul class="price">
+                                    <li class="header">Basic</li>
+                                    <li>$ 9.99 / year</li>
+                                    <li>Demoralized</li>
+                                    <li>Looks Reasonable</li>
+                                    <li>Weakness </li>
+                                    <li>Annoyances</li>
+                                    <li><a href="#" class="button">Sign Up</a></li>
+                                </ul>
+                            </div> -->
+                        <!-- </div> -->
+                        <!-- <div class="col-md-4">     
+                            <div class="table-columns">
+                                <ul class="price">
+                                    <li class="header bg-gold">Gold</li>
+                                    <li>$ 19.99 / year</li>
+                                    <li>Demoralized</li>
+                                    <li>Looks Reasonable</li>
+                                    <li>Weakness </li>
+                                    <li>Annoyances</li>
+                                    <li><a href="#" class="button">Sign Up</a></li>
+                                </ul>
+                            </div>
+                        </div> -->
+                        <!-- <div class="col-md-4">   
+                            <div class="table-columns">
+                                <ul class="price">
+                                    <li class="header">Premium</li>
+                                    <li>$ 39.99 / year</li>
+                                    <li>Demoralized</li>
+                                    <li>Looks Reasonable</li>
+                                    <li>Weakness </li>
+                                    <li>Annoyances</li>
+                                    <li><a href="#" class="button">Sign Up</a></li>
+                                </ul>
+                            </div>
+                        </div> -->
+                    </div>
+                </div>
+            </div>
+            <!--//End Pricing -->
+            <!--============================= Call to Action =============================-->
+            <section class="call-to_action">
+                <div class="container">
+                    <div class="row">
+                        <div class="col-md-12"> 
+                          <a href="https://acadm.cycu.edu.tw/111cycuadmissionpage/" class="btn btn-warning pull-right">查看面試公告</a>
+                            
+                                <h3>111學年度學系簡介暨申請入學指定項目甄試相關公告</h3>
+                                <span><a href="https://icare.cycu.edu.tw/news/read/?4811">※※111學年度大學申請入學第二階段指定甄試項目因應疫情注意事項及申請表公告※※</a></span> 
+                                
+                              
+                        </div>
+                    </div>
+                </div>
+            </section>
+            <!--//End Call to Action -->
+            <!--============================= FOOTER =============================-->
+            <footer>
+                <div class="container">
+                    <div class="row">
+                        <div class="col-md-12">
+                            <div class="subscribe">
+                                <h3></h3>
+                                <form id="subscribeform" action="php/subscribe.php" method="post">
+                                    <input class="signup_form" type="text" name="email" placeholder="請填寫你的email">
+                                    <button type="submit" class="btn btn-warning" id="js-subscribe-btn">訂閱</button>
+                                    <div id="js-subscribe-result" data-success-msg="Success, Please check your email." data-error-msg="Oops! Something went wrong"></div>
+                                    <!-- // end #js-subscribe-result -->
+                                </form>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="row">
+                        <div class="col-md-3">
+                            <div class="foot-logo">
+                                <a href="index.html">
+                                                                        <img src="images/footer-logo.png" class="img-fluid" alt="footer_logo">
+                                                                    </a>
+                                <p>2022 © copyright
+                                    <br>專題小組</p>
+                            </div>
+                        </div>
+                        <div class="col-md-2">
+                            <div class="sitemap">
+                                <h3>快速連結</h3>
+                                <ul>
+                                    <li><a href="https://itouch.cycu.edu.tw/active_project/cycuh300h_01/Overseas/index.html">僑生1網通</a></li>
+                                    <li><a href="https://ann.cycu.edu.tw/aa/">中原徵才</a></li>
+                                    <li><a href="https://itouch.cycu.edu.tw/active_project/cycu2000h_03/cycu_03/main.jsp">暑期選課</a></li>
+                                    <li><a href="https://ocd.cycu.edu.tw/">職涯發展</a></li>
+                                    <li><a href="https://icareer.cycu.edu.tw/">就業資訊</a></li>
+                                </ul>
+                            </div>
+                        </div>
+                        <div class="col-md-4">
+                            <div class="tweet_box">
+                                <h3>後台</h3>
+                                <li><a href="crud.html">後台登入</a></li>
+                                <div class="tweet-wrap">
+                                    <div class="tweet"></div>
+                                    <!-- // end .tweet -->
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-md-3">
+                            <div class="address">
+                                <h3>關於我們</h3>
+                                <p><span>Address: </span> 320314 桃園市中壢區中北路200號 No. 200, Zhongbei Rd., Zhongli Dist., Taoyuan City 320314, Taiwan (R.O.C.)</p>
+                                <p>Email : cycubox@cycu.edu.tw
+                                    <br> Tel：+886-3-265-9999 , +886-3-456-3171 │ <BR>
+                                    Fax：+886-3-265-8888 , +886-3-456-3176</p>
+                                <ul class="footer-social-icons">
+                                    <li><a href="https://www.facebook.com/groups/216074040231"><i class="fa fa-facebook fa-fb" aria-hidden="true"></i></a></li>
+                                </ul>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </footer>
+                    <!--//END FOOTER -->
+                    <!-- jQuery, Bootstrap JS. -->
+                    <script src="js/jquery.min.js"></script>
+                    <script src="js/tether.min.js"></script>
+                    <script src="js/bootstrap.min.js"></script>
+                    <!-- Plugins -->
+                    <script src="js/slick.min.js"></script>
+                    <script src="js/waypoints.min.js"></script>
+                    <script src="js/counterup.min.js"></script>
+                    <script src="js/instafeed.min.js"></script>
+                    <script src="js/owl.carousel.min.js"></script>
+                    <script src="js/validate.js"></script>
+                    <script src="js/tweetie.min.js"></script>
+                    <!-- Admission -->
+    <script src="js/admission.js"></script>
+                    <!-- Subscribe -->
+                    <script src="js/subscribe.js"></script>
+                    <!-- Script JS -->
+                    <script src="js/script.js"></script>
+ </body>
+
+</html>
